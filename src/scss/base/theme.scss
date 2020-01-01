@@ -1,0 +1,96 @@
+.theme {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+
+  &_color {
+    &_project-default {
+      --color_default: #ffffff;
+      --color_accent: #ffcc00;
+      --color_bordered: #000000;
+
+      --text_primary: #000000;
+      --text_secondary: rgba(0, 0, 0, 0.6);
+      --text_additional: rgba(0, 0, 0, 0.3);
+      --text_link: #0077ff;
+    }
+
+    &_project-brand {
+      --color_default: #0077ff;
+      --color_accent: #ffffff;
+      --color_bordered: #ffffff;
+
+      --text_primary: #ffffff;
+      --text_secondary: rgba(255, 255, 255, 0.6);
+      --text_additional: rgba(255, 255, 255, 0.3);
+      --text_link: #ffffff;
+    }
+
+    &_project-inverse {
+      --color_default: #000000;
+      --color_accent: #ffffff;
+      --color_bordered: #ffffff;
+
+      --text_primary: #ffffff;
+      --text_secondary: rgba(255, 255, 255, 0.6);
+      --text_additional: rgba(255, 255, 255, 0.3);
+      --text_link: #0077ff;
+    }
+
+    &_project-warning {
+      --color_default: #ff3333;
+      --color_accent: #ffffff;
+      --color_bordered: #ff3333;
+
+      --text_primary: #ffffff;
+      --text_secondary: rgba(255, 255, 255, 0.6);
+      --text_additional: rgba(255, 255, 255, 0.3);
+      --text_link: #ffffff;
+    }
+  }
+
+  &_size {
+    &_default {
+      --font-size_s: 8px;
+      --font-size_m: 10px;
+      --font-size_l: 11px;
+      --font-size_xl: 13px;
+      --font-size_xxl: 16px;
+
+      --line-heignt_s: 21px;
+      --line-heignt_m: 25px;
+      --line-heignt_l: 28px;
+      --line-heignt_xl: 34px;
+      --line-heignt_xxl: 38px;
+    }
+  }
+
+  &_space {
+    &_default {
+      --size_xxxs: 3px;
+      --size_xxs: 6px;
+      --size_xs: 9px;
+      --size_s: 15px;
+      --size_m: 18px;
+      --size_l: 24px;
+      --size_xl: 27px;
+      --size_xxl: 36px;
+      --size_xxxl: 45px;
+      --size_xxxxl: 51px;
+      --size_xxxxxl: 72px;
+    }
+  }
+
+  &_gap {
+    &_small {
+      --gap: var(--size_s);
+
+      @media (min-width: $desktop-width) {
+        --gap: var(--size_xl);
+      }
+    }
+  }
+}
