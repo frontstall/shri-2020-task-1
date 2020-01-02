@@ -1,0 +1,81 @@
+.card {
+  $content-paddings: m, xl, l, xxl, xxxl;
+
+  $footer-distribute-types: (
+    between: space-between,
+    center: center,
+    right: right,
+  );
+
+  $footer-vertical-align-types: center, top, bottom;
+
+  $footer-paddings: m, l, xl, xxl;
+
+  position: relative;
+
+  &_border {
+    &_all {
+      border: 1px solid #000000;
+    }
+  }
+
+  &_view {
+    &_default {
+      background-color: #ffffff;
+    }
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+
+    &_distribute {
+      &_center {
+        justify-content: center;
+      }
+    }
+    &_vertical-align {
+      &_center {
+        align-items: center;
+      }
+    }
+    &_space-a {
+      @each $padding in $content-paddings {
+        &_#{$padding} {
+          padding: var(--size_#{$padding});
+        }
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    &_distribute {
+      @each $key, $distribute-type in $footer-distribute-types {
+        &_#{$key} {
+          justify-content: $distribute-type;
+        }
+      }
+    }
+
+    &_vertical-align {
+      @each $vertical-align-type in $footer-vertical-align-types {
+        &_#{$vertical-align-type} {
+          align-items: $vertical-align-type;
+        }
+      }
+    }
+
+    &_space-a {
+      @each $padding in $footer-paddings {
+        &_#{$padding} {
+          padding: $padding;
+        }
+      }
+    }
+  }
+}
