@@ -1,0 +1,84 @@
+.form {
+  $item-indents: xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl;
+
+  $item-vertical-paddings: xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl;
+
+  $item-horizontal-paddings: xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl;
+
+  &_border {
+    &_all {
+      border: 3px solid var(--color_bordered);
+    }
+  }
+
+  &_view {
+    &_default {
+      background-color: var(--color_default);
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: 100%;
+
+    &_border {
+      &_bottom {
+        border-bottom: 3px solid var(--color_bordered);
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &_distribute {
+      &_between {
+        justify-content: space-between;
+      }
+    }
+
+    &_vertical-align {
+      &_center {
+        align-items: center;
+      }
+    }
+
+    &_indent-b {
+      @each $indent in $item-indents {
+        &_#{$indent} {
+          margin-bottom: var(--size_#{$indent});
+        }
+      }
+    }
+
+    &_space-h {
+      @each $padding in $item-horizontal-paddings {
+        &_#{$padding} {
+          padding-left: var(--size_#{$padding});
+          padding-right: var(--size_#{$padding});
+        }
+      }
+    }
+
+    &_space-v {
+      @each $padding in $item-vertical-paddings {
+        &_#{$padding} {
+          padding-top: var(--size_#{$padding});
+          padding-bottom: var(--size_#{$padding});
+        }
+      }
+    }
+  }
+
+  &__label {
+    &_width {
+      &_default {
+        width: 35%;
+      }
+    }
+  }
+
+  &__control {
+    // TODO: разобраться, как работает label+control
+  }
+}
