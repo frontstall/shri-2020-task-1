@@ -1,0 +1,22 @@
+.section {
+  $section-bottom-margins: xxl, xxxxl;
+
+  $section-vertical-padings: xxl, xxxxl;
+
+  &_indent-b {
+    @each $margin in $section-bottom-margins {
+      &_#{$margin} {
+        margin-bottom: var(--size_#{$margin});
+      }
+    }
+  }
+
+  &_space-v {
+    @each $padding in $section-vertical-padings {
+      &_#{$padding} {
+        padding-top: var(--size_#{$padding});
+        padding-bottom: var(--size_#{$padding});
+      }
+    }
+  }
+}
