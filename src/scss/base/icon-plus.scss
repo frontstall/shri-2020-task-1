@@ -1,0 +1,28 @@
+.icon-plus {
+  $icon-right-margins: s, m;
+
+  display: flex;
+
+  &_vertical-align {
+    align-items: center;
+  }
+
+  &__icon {
+    &_indent-r {
+      @each $margin in $icon-right-margins {
+        &_#{$margin} {
+          margin-right: var(--size_#{$margin});
+        }
+      }
+    }
+
+    &_indent-l {
+      &_l {
+        margin-left: var(--size_l);
+      }
+    }
+  }
+
+  &__block {
+  }
+}
