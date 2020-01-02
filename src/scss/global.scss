@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-:root {
-  --desktop-width: 1024px;
-  --screen-m: 1024px;
+div {
+  min-width: 10px;
+  min-height: 10px;
+  outline: 1px dotted blue;
 }

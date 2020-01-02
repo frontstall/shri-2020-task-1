@@ -16,7 +16,7 @@ $fraction-columns: 2, 3, 4, 5, 8;
 .grid {
   display: grid;
 
-  @media (min-width: var(--screen-m)) {
+  @media (min-width: $screen-m) {
     &_m-columns {
       @each $columns-count in $grid-columns {
         &_#{$columns-count} {
