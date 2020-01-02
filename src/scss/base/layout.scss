@@ -1,13 +1,13 @@
-$container-sizes: (
-  s: 920px,
-  m: 1280px,
-);
-
-$container-vertical-gaps: xxxxl, xxxxxl;
-
-$container-bottom-indents: xxl, xxxxl;
-
 .layout {
+  $container-sizes: (
+    s: 920px,
+    m: 1280px,
+  );
+
+  $container-vertical-gaps: xxxxl, xxxxxl;
+
+  $container-bottom-indents: xxl, xxxxl;
+
   &__container {
     &_align {
       &_center {

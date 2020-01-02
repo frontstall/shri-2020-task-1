@@ -1,19 +1,19 @@
-$grid-columns: 10, 12;
-
-$grid-columns-gaps: (
-  two-thirds: calc(2 / 3),
-  full: 1,
-  half: 0.5,
-);
-
-$grid-rows-gaps: (
-  half: 0.5,
-  full: 1,
-);
-
-$fraction-columns: 2, 3, 4, 5, 8;
-
 .grid {
+  $grid-columns: 10, 12;
+
+  $grid-columns-gaps: (
+    two-thirds: calc(2 / 3),
+    full: 1,
+    half: 0.5,
+  );
+
+  $grid-rows-gaps: (
+    half: 0.5,
+    full: 1,
+  );
+
+  $fraction-columns: 2, 3, 4, 5, 8;
+
   display: grid;
 
   @media (min-width: $screen-m) {
