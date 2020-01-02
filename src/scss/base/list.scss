@@ -1,0 +1,56 @@
+.list {
+  $item-bottom-margins: s, m, l, xl;
+
+  &_border {
+    &_all {
+      border: 3px solid var(--color_bordered);
+    }
+  }
+
+  &_view {
+    &_default {
+      background-color: var(--color_default);
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    &_border {
+      &_top {
+        border-top: 3px solid var(--color_bordered);
+      }
+      &_bottom {
+        border-bottom: 3px solid var(--color_bordered);
+      }
+    }
+
+    &_distribute {
+      justify-content: space-between;
+    }
+
+    &_vertical-align {
+      align-items: center;
+    }
+
+    &_indent-t {
+      margin-top: var(--size_m);
+    }
+
+    &_indent-b {
+      @each $margin in $item-bottom-margins {
+        &_#{$margin} {
+          margin-bottom: var(--size_#{$margin});
+        }
+      }
+    }
+
+    &_space-b {
+      padding-bottom: var(--size_s);
+    }
+
+    &_space-a {
+      padding: var(--size_m);
+    }
+  }
+}
