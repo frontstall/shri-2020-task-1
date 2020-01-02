@@ -1,0 +1,54 @@
+$grid-columns: 10, 12;
+
+$grid-columns-gaps: (
+  two-thirds: calc(2 / 3),
+  full: 1,
+  half: 0.5,
+);
+
+$grid-rows-gaps: (
+  half: 0.5,
+  full: 1,
+);
+
+$fraction-columns: 2, 3, 4, 5, 8;
+
+.grid {
+  display: grid;
+
+  @media (min-width: var(--screen-m)) {
+    &_m-columns {
+      @each $columns-count in $grid-columns {
+        &_#{$columns-count} {
+          grid-template-columns: repeat($columns-count, 1fr);
+        }
+      }
+    }
+
+    &_col-gap {
+      @each $value, $multiplier in $grid-columns-gaps {
+        &_#{$value} {
+          column-gap: calc(var(--gap) * #{$multiplier});
+        }
+      }
+    }
+
+    &_row-gap {
+      @each $value, $multiplier in $grid-columns-gaps {
+        &_#{$value} {
+          row-gap: calc(var(--gap) * #{$multiplier});
+        }
+      }
+    }
+
+    &__fraction {
+      &_m-col {
+        @each $columns-count in $fraction-columns {
+          &_#{$columns-count} {
+            grid-column: span $columns-count;
+          }
+        }
+      }
+    }
+  }
+}

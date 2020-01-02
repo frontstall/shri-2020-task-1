@@ -1,37 +1,43 @@
+$container-sizes: (
+  s: 920px,
+  m: 1280px,
+);
+
+$container-vertical-gaps: xxxxl, xxxxxl;
+
+$container-bottom-indents: xxl, xxxxl;
+
 .layout {
   &__container {
     &_align {
       &_center {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
     &_size {
-      &_s {
-        max-width: 920px;
-      }
-      &_m {
-        max-width: 1280px;
+      @each $key, $size in $container-sizes {
+        &_#{$key} {
+          max-width: $size;
+        }
       }
     }
 
     &_space-v {
-      &_xxxxl {
-        padding-top: var(--size_xxxxl);
-        padding-bottom: var(--size_xxxxl);
-      }
-      &_xxxxxl {
-        padding-top: var(--size_xxxxxl);
-        padding-bottom: var(--size_xxxxxl);
+      @each $size in $container-vertical-gaps {
+        &_#{$size} {
+          padding-top: var(--size_#{$size});
+          padding-bottom: var(--size_#{$size});
+        }
       }
     }
 
     &_indent-b {
-      &_xxl {
-        margin-bottom: var(--size_xxl);
-      }
-      &_xxxxl {
-        margin-bottom: var(--size_xxxxl);
+      @each $size in $container-bottom-indents {
+        &_#{$size} {
+          margin-bottom: var(--size_#{$size});
+        }
       }
     }
   }
