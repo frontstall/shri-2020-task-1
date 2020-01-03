@@ -1,0 +1,20 @@
+.input {
+  $input-sizes: (
+    s: 24px,
+    m: 32px,
+    l: 42px,
+    xl: 56px,
+    xxl: 64px,
+  );
+
+  width: 100%;
+  border: 3px solid var(--color_bordered);
+
+  &_size {
+    @each $size, $height in $input-sizes {
+      &_#{$size} {
+        height: $height;
+      }
+    }
+  }
+}

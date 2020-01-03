@@ -79,6 +79,6 @@
   }
 
   &__control {
-    // TODO: разобраться, как работает label+control
+    flex-grow: 1;
   }
 }
