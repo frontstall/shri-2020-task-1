@@ -1,0 +1,48 @@
+.brand-logo {
+  $logo-colors: (
+    blue: #5dcdf9,
+    green: #23b324,
+    red: #ff3333,
+    purple: #c62cff,
+  );
+
+  $logo-sizes: (
+    xxs: (
+      width: 24px,
+      height: 24px,
+    ),
+    xs: (
+      width: 32px,
+      height: 32px,
+    ),
+    s: (
+      width: 40px,
+      height: 40px,
+    ),
+    m: (
+      width: 60px,
+      height: 60px,
+    ),
+    l: (
+      width: 80px,
+      height: 80px,
+    ),
+  );
+
+  &_name {
+    @each $color, $value in $logo-colors {
+      &_#{$color} {
+        background-color: $value;
+      }
+    }
+  }
+
+  &_size {
+    @each $size, $dimensions in $logo-sizes {
+      &_#{$size} {
+        width: map-get($dimensions, 'width');
+        height: map-get($dimensions, 'height');
+      }
+    }
+  }
+}
