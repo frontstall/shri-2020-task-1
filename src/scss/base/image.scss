@@ -1,0 +1,8 @@
+.image {
+  width: 100%;
+  border: 3px solid var(--color_bordered);
+  background-color: var(--color_default);
+  background-image: var(--image);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}

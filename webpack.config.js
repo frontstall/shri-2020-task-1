@@ -2,7 +2,8 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
-  entry: './src/index.js',
+  mode: 'production',
+  entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'script.js',
@@ -27,6 +28,17 @@ const config = {
         test: /\.js$/,
         use: 'babel-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(svg|png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images',
+            },
+          },
+        ],
       },
     ],
   },
