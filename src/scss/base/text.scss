@@ -1,44 +1,29 @@
 .text {
   $text-word-sizes: (
     s: (
-      width: (
-        s: 20px,
-        m: 48px,
-        l: 100px,
-      ),
-      height: 8px,
+      s: 20px,
+      m: 48px,
+      l: 100px,
     ),
     m: (
-      width: (
-        s: 24px,
-        m: 56px,
-        l: 114px,
-      ),
-      height: 10px,
+      s: 24px,
+      m: 56px,
+      l: 114px,
     ),
     l: (
-      width: (
-        s: 28px,
-        m: 68px,
-        l: 138px,
-      ),
-      height: 11px,
+      s: 28px,
+      m: 68px,
+      l: 138px,
     ),
     xl: (
-      width: (
-        s: 32px,
-        m: 74px,
-        l: 154px,
-      ),
-      height: 13px,
+      s: 32px,
+      m: 74px,
+      l: 154px,
     ),
     xxl: (
-      width: (
-        s: 36px,
-        m: 88px,
-        l: 184px,
-      ),
-      height: 16px,
+      s: 36px,
+      m: 88px,
+      l: 184px,
     ),
   );
 
@@ -51,27 +36,27 @@
 
   $text-colors: primary, secondary, ghost, link;
 
-  display: flex;
-
   &_align {
     &_center {
-      justify-content: center;
+      text-align: center;
     }
   }
 
   &_size {
     @each $text-size, $word-sizes in $text-word-sizes {
       &_#{$text-size} {
-        height: var(--font-size_#{$text-size});
-
+        line-height: var(--line-height_#{$text-size});
         .text__word {
-          @each $word-modifier, $word-width in map-get($word-sizes, 'width') {
-            &_#{$word-modifier} {
-              width: $word-width;
+          display: inline-block;
+
+          &_width {
+            @each $word-modifier, $word-width in $word-sizes {
+              &_#{$word-modifier} {
+                width: $word-width;
+                height: var(--font-size_#{$text-size});
+              }
             }
           }
-
-          height: map-get($word-sizes, 'height');
         }
       }
     }
@@ -88,7 +73,9 @@
   &_view {
     @each $color in $text-colors {
       &_#{$color} {
-        background-color: var(--text_#{$color});
+        .text__word {
+          background-color: var(--text_#{$color});
+        }
       }
     }
   }

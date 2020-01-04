@@ -1,11 +1,4 @@
 .theme {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: $desktop) {
-    display: block;
-  }
-
   &_color {
     &_project-default {
       --color_default: #ffffff;
@@ -68,11 +61,11 @@
       --font-size_xl: 13px;
       --font-size_xxl: 16px;
 
-      --line-heignt_s: 21px;
-      --line-heignt_m: 25px;
-      --line-heignt_l: 28px;
-      --line-heignt_xl: 34px;
-      --line-heignt_xxl: 38px;
+      --line-height_s: 21px;
+      --line-height_m: 25px;
+      --line-height_l: 28px;
+      --line-height_xl: 34px;
+      --line-height_xxl: 38px;
     }
   }
 

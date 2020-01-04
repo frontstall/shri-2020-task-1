@@ -26,15 +26,21 @@
     }
 
     &_distribute {
-      justify-content: space-between;
+      &_between {
+        justify-content: space-between;
+      }
     }
 
     &_vertical-align {
-      align-items: center;
+      &_center {
+        align-items: center;
+      }
     }
 
     &_indent-t {
-      margin-top: var(--size_m);
+      &_m {
+        margin-top: var(--size_m);
+      }
     }
 
     &_indent-b {
@@ -46,11 +52,15 @@
     }
 
     &_space-b {
-      padding-bottom: var(--size_s);
+      &_s {
+        padding-bottom: var(--size_s);
+      }
     }
 
     &_space-a {
-      padding: var(--size_m);
+      &_m {
+        padding: var(--size_m);
+      }
     }
   }
 }

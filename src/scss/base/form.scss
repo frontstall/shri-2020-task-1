@@ -19,6 +19,7 @@
 
   &__item {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 
     &_border {
@@ -47,6 +48,10 @@
       @each $indent in $item-indents {
         &_#{$indent} {
           margin-bottom: var(--size_#{$indent});
+
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -80,5 +85,7 @@
 
   &__control {
     flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 }

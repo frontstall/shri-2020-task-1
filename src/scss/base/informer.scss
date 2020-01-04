@@ -15,8 +15,6 @@
 
   $action-paddings: xl, xxl;
 
-  display: flex;
-
   &_border {
     &_all {
       border: 3px solid var(--color_bordered);
@@ -30,6 +28,9 @@
   }
 
   &__content {
+    display: flex;
+    flex-wrap: wrap;
+
     &_distribute {
       @each $key, $type in $content-distribute-types {
         &_#{$key} {
@@ -41,13 +42,16 @@
     &_space-a {
       @each $padding in $content-paddings {
         &_#{$padding} {
-          padding: $padding;
+          padding: var(--size_#{$padding});
         }
       }
     }
   }
 
   &__action {
+    display: flex;
+    flex-wrap: wrap;
+
     &_distribute {
       @each $key, $type in $action-distribute-types {
         &_#{$key} {
@@ -59,7 +63,7 @@
     &_space-a {
       @each $padding in $action-paddings {
         &_#{$padding} {
-          padding: $padding;
+          padding: var(--size_#{$padding});
         }
       }
     }

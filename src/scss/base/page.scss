@@ -1,0 +1,8 @@
+.page {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}
