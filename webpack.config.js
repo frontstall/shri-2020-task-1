@@ -30,13 +30,10 @@ const config = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(svg|png|jpg|gif)$/,
+        test: /\.(svg)$/,
         use: [
           {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'images',
-            },
+            loader: 'url-loader',
           },
         ],
       },
