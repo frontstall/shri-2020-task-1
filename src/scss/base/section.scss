@@ -3,6 +3,8 @@
 
   $section-vertical-padings: xxl, xxxxl;
 
+  background-color: var(--color_default);
+
   &_indent-b {
     @each $margin in $section-bottom-margins {
       &_#{$margin} {
