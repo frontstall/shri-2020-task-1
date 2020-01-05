@@ -9,12 +9,6 @@ const init = (context) => {
     context.querySelectorAll('.e-accordion__short'),
   );
 
-  const accordionsHiddenParts = context.querySelectorAll('.e-accordion__more');
-
-  accordionsHiddenParts.forEach((button) => {
-    button.classList.add('visually-hidden');
-  });
-
   const themeSwitch = context.querySelector('.onoffswitch');
 
   context.addEventListener('click', (evt) => {
@@ -29,7 +23,7 @@ const init = (context) => {
         '.e-accordion__more',
       );
 
-      accordionHiddenPart.classList.toggle('visually-hidden');
+      accordionHiddenPart.classList.toggle('history__hide');
 
       return;
     }
