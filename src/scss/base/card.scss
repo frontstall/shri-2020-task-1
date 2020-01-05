@@ -73,7 +73,7 @@
     &_space-a {
       @each $padding in $footer-paddings {
         &_#{$padding} {
-          padding: $padding;
+          padding: var(--size_#{$padding});
         }
       }
     }
