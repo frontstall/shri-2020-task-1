@@ -16,27 +16,27 @@
 
   display: grid;
 
+  &_col-gap {
+    @each $value, $multiplier in $grid-columns-gaps {
+      &_#{$value} {
+        column-gap: calc(var(--gap) * #{$multiplier});
+      }
+    }
+  }
+
+  &_row-gap {
+    @each $value, $multiplier in $grid-columns-gaps {
+      &_#{$value} {
+        row-gap: calc(var(--gap) * #{$multiplier});
+      }
+    }
+  }
+
   @media (min-width: $screen-m) {
     &_m-columns {
       @each $columns-count in $grid-columns {
         &_#{$columns-count} {
           grid-template-columns: repeat($columns-count, 1fr);
-        }
-      }
-    }
-
-    &_col-gap {
-      @each $value, $multiplier in $grid-columns-gaps {
-        &_#{$value} {
-          column-gap: calc(var(--gap) * #{$multiplier});
-        }
-      }
-    }
-
-    &_row-gap {
-      @each $value, $multiplier in $grid-columns-gaps {
-        &_#{$value} {
-          row-gap: calc(var(--gap) * #{$multiplier});
         }
       }
     }
