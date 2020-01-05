@@ -1,6 +1,7 @@
 .page {
   display: flex;
   flex-direction: column;
+  background-color: var(--color_default);
 
   @media (min-width: $desktop) {
     display: block;

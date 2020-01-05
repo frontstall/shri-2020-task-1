@@ -1,0 +1,19 @@
+.header {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    padding-top: var(--size_xxxl);
+    padding-bottom: var(--size_xxxl);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__logo {
+    width: 179px;
+    height: 34px;
+    background-color: var(--text_primary);
+  }
+}

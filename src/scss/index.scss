@@ -1,3 +1,5 @@
+@import '~normalize.css/normalize.css';
+
 @import './global.scss';
 @import './variables.scss';
 
@@ -22,9 +24,11 @@
 @import './base/text.scss';
 @import './base/theme.scss';
 
-@import './content.scss/event.scss';
-@import './content.scss/footer.scss';
-@import './content.scss/history.scss';
-@import './content.scss/payment.scss';
-@import './content.scss/product.scss';
-@import './content.scss/warning.scss';
+@import './content/event.scss';
+@import './content/footer.scss';
+@import './content/header.scss';
+@import './content/history.scss';
+@import './content/onoffswitch.scss';
+@import './content/payment.scss';
+@import './content/product.scss';
+@import './content/warning.scss';
