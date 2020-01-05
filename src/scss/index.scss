@@ -1,6 +1,8 @@
 @import './global.scss';
 @import './variables.scss';
 
+@import './visually-hidden.scss';
+
 @import './base/avatar.scss';
 @import './base/brand-logo.scss';
 @import './base/button.scss';
@@ -19,4 +21,7 @@
 @import './base/section.scss';
 @import './base/text.scss';
 @import './base/theme.scss';
-@import './visually-hidden.scss';
+
+@import './content.scss/payment.scss';
+@import './content.scss/product.scss';
+@import './content.scss/warning.scss';

@@ -1,0 +1,17 @@
+.warning {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 335px;
+  height: 100%;
+
+  &__content {
+    .placeholder {
+      margin-top: var(--size_m);
+      margin-bottom: var(--size_m);
+    }
+  }
+
+  &__button-wrapper {
+  }
+}
