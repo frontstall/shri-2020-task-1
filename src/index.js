@@ -1,45 +1,53 @@
 import './scss/index.scss';
 
-const accordionsButtons = Array.from(
-  document.querySelectorAll('.e-accordion__short'),
-);
+const body = document.querySelector('body');
 
-const accordionsHiddenParts = document.querySelectorAll('.e-accordion__more');
+const init = (context) => {
+  if (!context) return;
 
-accordionsHiddenParts.forEach((button) => {
-  button.classList.add('visually-hidden');
-});
+  const accordionsButtons = Array.from(
+    document.querySelectorAll('.e-accordion__short'),
+  );
 
-const themeSwitch = document.querySelector('.onoffswitch');
+  const accordionsHiddenParts = document.querySelectorAll('.e-accordion__more');
 
-document.addEventListener('click', (evt) => {
-  const { target } = evt;
+  accordionsHiddenParts.forEach((button) => {
+    button.classList.add('visually-hidden');
+  });
 
-  // prettier-ignore
-  const accordionButton = accordionsButtons
-    .find((button) => button.contains(target));
+  const themeSwitch = document.querySelector('.onoffswitch');
 
-  if (accordionButton) {
-    const accordionHiddenPart = accordionButton.parentNode.querySelector(
-      '.e-accordion__more',
-    );
+  document.addEventListener('click', (evt) => {
+    const { target } = evt;
 
-    accordionHiddenPart.classList.toggle('visually-hidden');
+    // prettier-ignore
+    const accordionButton = accordionsButtons
+      .find((button) => button.contains(target));
 
-    return;
-  }
+    if (accordionButton) {
+      const accordionHiddenPart = accordionButton.parentNode.querySelector(
+        '.e-accordion__more',
+      );
 
-  if (themeSwitch.contains(target)) {
-    themeSwitch.classList.toggle('onoffswitch_checked');
+      accordionHiddenPart.classList.toggle('visually-hidden');
 
-    const elementsWithThemes = [
-      ...document.querySelectorAll('.theme_color_project-default'),
-      ...document.querySelectorAll('.theme_color_project-inverse'),
-    ];
+      return;
+    }
 
-    elementsWithThemes.forEach((element) => {
-      element.classList.toggle('theme_color_project-default');
-      element.classList.toggle('theme_color_project-inverse');
-    });
-  }
-});
+    if (themeSwitch.contains(target)) {
+      themeSwitch.classList.toggle('onoffswitch_checked');
+
+      const elementsWithThemes = [
+        ...document.querySelectorAll('.theme_color_project-default'),
+        ...document.querySelectorAll('.theme_color_project-inverse'),
+      ];
+
+      elementsWithThemes.forEach((element) => {
+        element.classList.toggle('theme_color_project-default');
+        element.classList.toggle('theme_color_project-inverse');
+      });
+    }
+  });
+};
+
+init(body);
