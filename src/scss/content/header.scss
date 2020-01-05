@@ -1,14 +1,18 @@
 .header {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--size_xxxl);
+  padding-bottom: var(--size_xxxl);
+
   &__content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     max-width: 1280px;
-    padding-top: var(--size_xxxl);
-    padding-bottom: var(--size_xxxl);
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: var(--gap);
+    margin-right: var(--gap);
   }
 
   &__logo {

@@ -1,12 +1,16 @@
 .footer {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--size_xxxl);
+  padding-bottom: var(--gap);
+
   &__content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1280px;
-    padding-top: var(--size_xxxl);
-    padding-bottom: var(--gap);
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-left: var(--gap);
+    margin-right: var(--gap);
   }
 }

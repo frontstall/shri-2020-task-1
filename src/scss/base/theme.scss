@@ -10,7 +10,7 @@
       --text_ghost: rgba(0, 0, 0, 0.3);
       --text_link: #0077ff;
 
-      --image: url('../../assets/images/image-placeholder-primary.svg');
+      --image: url('/assets/images/image-placeholder-primary.svg');
     }
 
     &_project-brand {
@@ -23,7 +23,7 @@
       --text_ghost: rgba(255, 255, 255, 0.3);
       --text_link: #ffffff;
 
-      --image: url('../../assets/images/image-placeholder-inverse.svg');
+      --image: url('/assets/images/image-placeholder-inverse.svg');
     }
 
     &_project-inverse {
@@ -36,7 +36,7 @@
       --text_ghost: rgba(255, 255, 255, 0.3);
       --text_link: #0077ff;
 
-      --image: url('../../assets/images/image-placeholder-inverse.svg');
+      --image: url('/assets/images/image-placeholder-inverse.svg');
     }
 
     &_project-warning {
@@ -49,7 +49,7 @@
       --text_ghost: rgba(255, 255, 255, 0.3);
       --text_link: #ffffff;
 
-      --image: url('../../assets/images/image-placeholder-primary.svg');
+      --image: url('/assets/images/image-placeholder-primary.svg');
     }
   }
 
