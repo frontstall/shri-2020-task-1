@@ -6,18 +6,18 @@ const init = (context) => {
   if (!context) return;
 
   const accordionsButtons = Array.from(
-    document.querySelectorAll('.e-accordion__short'),
+    context.querySelectorAll('.e-accordion__short'),
   );
 
-  const accordionsHiddenParts = document.querySelectorAll('.e-accordion__more');
+  const accordionsHiddenParts = context.querySelectorAll('.e-accordion__more');
 
   accordionsHiddenParts.forEach((button) => {
     button.classList.add('visually-hidden');
   });
 
-  const themeSwitch = document.querySelector('.onoffswitch');
+  const themeSwitch = context.querySelector('.onoffswitch');
 
-  document.addEventListener('click', (evt) => {
+  context.addEventListener('click', (evt) => {
     const { target } = evt;
 
     // prettier-ignore
@@ -38,8 +38,8 @@ const init = (context) => {
       themeSwitch.classList.toggle('onoffswitch_checked');
 
       const elementsWithThemes = [
-        ...document.querySelectorAll('.theme_color_project-default'),
-        ...document.querySelectorAll('.theme_color_project-inverse'),
+        ...context.querySelectorAll('.theme_color_project-default'),
+        ...context.querySelectorAll('.theme_color_project-inverse'),
       ];
 
       elementsWithThemes.forEach((element) => {
