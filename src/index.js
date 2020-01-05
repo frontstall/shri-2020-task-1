@@ -12,7 +12,7 @@ accordionsHiddenParts.forEach((button) => {
 
 const themeSwitch = document.querySelector('.onoffswitch');
 
-document.body.addEventListener('click', (evt) => {
+document.addEventListener('click', (evt) => {
   const { target } = evt;
 
   // prettier-ignore
