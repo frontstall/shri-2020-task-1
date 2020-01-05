@@ -15,6 +15,7 @@
 
   &__item {
     display: flex;
+    flex-wrap: wrap;
 
     &_border {
       &_top {
@@ -22,6 +23,10 @@
       }
       &_bottom {
         border-bottom: 3px solid var(--color_bordered);
+
+        &:last-child {
+          border-bottom: none;
+        }
       }
     }
 

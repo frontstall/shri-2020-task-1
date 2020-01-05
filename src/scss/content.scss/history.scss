@@ -1,0 +1,41 @@
+.history {
+  &__transaction {
+    flex-direction: column;
+  }
+
+  &__show {
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  &__hide {
+  }
+
+  &__destination {
+  }
+
+  &__pic {
+  }
+
+  &__label {
+  }
+
+  &__description {
+  }
+
+  &__actions {
+    margin-bottom: 0;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__time {
+  }
+
+  &__quantity {
+  }
+}

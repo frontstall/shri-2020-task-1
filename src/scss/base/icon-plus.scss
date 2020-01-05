@@ -4,7 +4,9 @@
   display: flex;
 
   &_vertical-align {
-    align-items: center;
+    &_center {
+      align-items: center;
+    }
   }
 
   &__icon {
