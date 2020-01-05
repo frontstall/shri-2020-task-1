@@ -5,9 +5,6 @@
     flex-direction: column;
   }
 
-  &__footer {
-  }
-
   &__preview {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -15,13 +12,7 @@
     margin-bottom: var(--size_xxl);
   }
 
-  &__speaker {
-  }
-
   &__title {
     margin-bottom: var(--size_s);
-  }
-
-  &__description {
   }
 }

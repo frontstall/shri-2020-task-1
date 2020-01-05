@@ -12,12 +12,12 @@ accordionsHiddenParts.forEach((button) => {
 
 const themeSwitch = document.querySelector('.onoffswitch');
 
-document.addEventListener('click', (evt) => {
+document.body.addEventListener('click', (evt) => {
   const { target } = evt;
 
-  const accordionButton = accordionsButtons.find((button) =>
-    button.contains(target),
-  );
+  // prettier-ignore
+  const accordionButton = accordionsButtons
+    .find((button) => button.contains(target));
 
   if (accordionButton) {
     const accordionHiddenPart = accordionButton.parentNode.querySelector(
