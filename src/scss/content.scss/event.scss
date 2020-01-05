@@ -1,0 +1,27 @@
+.event {
+  min-height: 400px;
+
+  &__content {
+    flex-direction: column;
+  }
+
+  &__footer {
+  }
+
+  &__preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--size_xs);
+    margin-bottom: var(--size_xxl);
+  }
+
+  &__speaker {
+  }
+
+  &__title {
+    margin-bottom: var(--size_s);
+  }
+
+  &__description {
+  }
+}
